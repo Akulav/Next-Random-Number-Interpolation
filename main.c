@@ -1,8 +1,6 @@
 #include <stdio.h>
 int main()
 {
-    //Se declara variabilele. y - pozitia punctului pe axa oy, x - pozitia punctului pe ox, h - x cu coordonata (101;y), ytotal - medie aritmetica a 99 de
-    //ecuatii pentru interpolarea liniara
 
     int ytotal,ytotal1,yclasic,yclasic1,yclasic2;
     int y1 ,y2 ,y3 ,y4 ,y5 ,y6 ,y7 ,y8 ,y9 ,y10;
@@ -27,9 +25,8 @@ int main()
     int x91,x92,x93,x94,x95,x96,x97,x98,x99,x100;
     int h=101;
 
-    //Se cere introducerea celor 100 de numere. Si se declara implicit valoarea celor 100 de x, cu pozitiile lor corespunzatoare pe ox.
 
-    printf("Introdu prin spatii cele 100 de numere\n");
+    printf("Input 100 numbers, separated by spaces.\n");
     scanf("%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d"
           "%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d"
           "%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d"
@@ -52,7 +49,6 @@ int main()
       x71=71;x72=72;x73=73;x74=74;x75=75;x76=76;x77=77;x78=78;x79=79;x80=80;x81=81;x82=82;x83=83;x84=84;x85=85;x86=86;x87=87;x88=88;x89=89;x90=90;x91=91;x92=92;
       x93=93;x94=94;x95=95;x96=96;x97=97;x98=98;x99=99;x100=100;
 
-      //Se calculeaza media interpolarii liniare de la punct la punct.
 
     ytotal=(((y1*(x2-h)+y2*(h-x1))/(x2-x1))+((y2*(x3-h)+y3*(h-x2))/(x3-x2))+
             ((y3*(x4-h)+y4*(h-x3))/(x4-x3))+((y4*(x5-h)+y5*(h-x4))/(x5-x4))+
@@ -105,9 +101,8 @@ int main()
             ((y97*(x98-h)+y98*(h-x97))/(x98-x97))+((y98*(x99-h)+y99*(h-x98))/(x99-x98))+
             ((y99*(x100-h)+y100*(h-x99))/(x100-x99)))/100;
 
-    //Se afiseaza raspunsul
 
-    if (ytotal<0) {printf("valoarea extrapolata",ytotal*(-1));};
+    if (ytotal<0) {printf("Predicted value: ",ytotal*(-1));};
 
 printf("\n\n Valoarea aproximativa interpolata a numarului in pozitia 101 este (yclasic): %d", ytotal);
 return 0;
